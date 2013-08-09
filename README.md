@@ -1,21 +1,17 @@
 httpclient - HTTP accessing library.
 Copyright (C) 2000-2012  NAKAMURA, Hiroshi  <nahi@ruby-lang.org>.
 
-'httpclient' gives something like the functionality of libwww-perl (LWP) in
-Ruby.  'httpclient' formerly known as 'http-access2'.
+'httpclient' gives something like the functionality of libwww-perl (LWP) in Ruby.  'httpclient' formerly known as 'http-access2'.
 
 See HTTPClient for documentation.
 
-
-== Features
-
+## Features
 * methods like GET/HEAD/POST/* via HTTP/1.1.
 * HTTPS(SSL), Cookies, proxy, authentication(Digest, NTLM, Basic), etc.
 * asynchronous HTTP request, streaming HTTP request.
 * debug mode CLI.
-
 * by contrast with net/http in standard distribution;
-  * Cookies support
+* Cookies support
   * MT-safe
   * streaming POST (POST with File/IO)
   * Digest auth
@@ -30,7 +26,7 @@ See HTTPClient for documentation.
   * Rather advanced HTTP/1.1 usage such as Range, deflate, etc.
     (of course you can set it in header by yourself)
 
-== httpclient command
+## httpclient command
 
 Usage: 1) % httpclient get https://www.google.co.jp/ q=ruby
 Usage: 2) % httpclient
@@ -41,35 +37,32 @@ HTTPClient as 'self'.  You can call HTTPClient instance methods like;
 
   > get "https://www.google.co.jp/", :q => :ruby
 
-== Author
+## Author
 
 Name:: Hiroshi Nakamura
+
 E-mail:: nahi@ruby-lang.org
+
 Project web site:: http://github.com/nahi/httpclient
 
-
-== License
+## License
 
 This program is copyrighted free software by NAKAMURA, Hiroshi.  You can
 redistribute it and/or modify it under the same terms of Ruby's license;
 either the dual license version in 2003, or any later version.
 
 httpclient/session.rb is based on http-access.rb in http-access/0.0.4.  Some
-part of it is copyrighted by Maebashi-san who made and published
-http-access/0.0.4.  http-access/0.0.4 did not include license notice but when
-I asked Maebashi-san he agreed that I can redistribute it under the same terms
-of Ruby.  Many thanks to Maebashi-san.
+part of it is copyrighted by Maebashi-san who made and published http-access/0.0.4.  http-access/0.0.4 did not include license notice but when
+I asked Maebashi-san he agreed that I can redistribute it under the same terms of Ruby.  Many thanks to Maebashi-san.
 
-
-== Install
-
-=== Gem
+## Install
+### Gem
 
 You can install httpclient with rubygems.
 
   % gem install httpclient
 
-=== Package
+### Package
 
 You can install httpclient with the bundled installer script.
 
@@ -80,21 +73,19 @@ It will install lib/* to your site_ruby directory such as
 
 For uninstall, delete installed files from your site_ruby directory.
 
-
-== Usage
+## Usage
 
 See HTTPClient for documentation.
 You can also check sample/howto.rb how to use APIs.
 
-
-== Download
+## Download
 
 * Gem repository
   * https://rubygems.org/gems/httpclient
 
 * git: git://github.com/nahi/httpclient.git
 
-== Bug report or Feature request
+## Bug report or Feature request
 
 Please file a ticket at the project web site.
 
@@ -104,24 +95,19 @@ Please file a ticket at the project web site.
 
 Thanks in advance. 
 
+## Changes
 
-== Changes
-
-= Changes in 2.3.3 =
-
+* Changes in 2.3.3
   February 24, 2013 - version 2.3.3
-
-  * Changes
-
-    * #144 Add User-Agent field by default. You can remove the header by
+  **Changes**
+  * #144 Add User-Agent field by default. You can remove the header by
       setting nil to HTTPClient#agent_name.
 
-= Changes in 2.3.2 =
+* Changes in 2.3.2
 
   January 5, 2013 - version 2.3.2
-
-  * Changes 
-
+  
+  **Changes**
     * #138 Revert Timeout change unintentionally included in v2.3.1.  It's
       reported that the change causes background processes not terminated
       properly.
